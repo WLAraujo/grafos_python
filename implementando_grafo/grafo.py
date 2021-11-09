@@ -1,3 +1,7 @@
+# ALGUNS DETALHES:
+# * É possível eliminar o conjunto de vértices, afinal, o dicionário de vizinhos já contém essa informação
+# * No método construtor do grafo poderiamos já usar os métodos add_vertice e add_aresta
+
 class Grafo:
 
     # Método construtor da classe Grafo
@@ -57,3 +61,5 @@ if __name__ == '__main__':
     print("Função add_vertice ok")
 
     # Testes da função add_aresta
+    G.add_aresta((1,4))
+    assert(G.vizinhos(1) == {2,4})
